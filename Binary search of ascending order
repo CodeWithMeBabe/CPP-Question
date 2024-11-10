@@ -1,0 +1,36 @@
+// Binary search when element in ascending order
+#include<iostream>
+using namespace std;
+int main(){
+    int n,key,start=0,end,mid;
+    cout<<"Enter number of element in array : ";
+    cin>>n;
+    int A[n];
+    cout<<"Enter array elements in ascending order : ";
+    for(auto &x:A){
+        cin>>x;
+    }
+    cout<<"Given array is ";
+    for(auto &x:A){
+        cout<<x<<" ";
+    }
+    cout<<"\nEnter key value for search : ";
+    cin>>key;
+    end=sizeof(A)/sizeof(A[0]);
+    while(start<=end){
+        mid=(start+end)/2;
+        if(A[mid]==key){
+            cout<<key<<" present at index "<<mid; 
+            return 0;
+        }
+        else if(A[mid]<key){
+            start =mid+1;
+        }
+        else {
+            end=mid-1;
+        }
+
+    }
+    cout<<"Element not found ";
+    return 0;
+}
