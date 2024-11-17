@@ -1,0 +1,16 @@
+#include<iostream>
+using namespace std;
+int main(){
+    cout<<"Enter row : \n";
+    int row;
+    //cin>>row;
+    row=7;
+    int a=1;
+    for(int i=1;i<=row;i++){
+        for(int j=1;j<=i;j++){
+            cout<<a<<" ";
+            a += 1;
+        }cout<<endl;
+    }
+    return 0;
+}
